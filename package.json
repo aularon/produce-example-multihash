@@ -1,0 +1,27 @@
+{
+  "name": "produce-example-multihash",
+  "version": "0.1.0",
+  "description": "Creates multiple hashes of files in a directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aularon/produce-example-multihash.git"
+  },
+  "keywords": [
+    "produce",
+    "example"
+  ],
+  "author": "Hasan Arous <arous.hasan@gmail.com> (http://www.etabits.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aularon/produce-example-multihash/issues"
+  },
+  "homepage": "https://github.com/aularon/produce-example-multihash#readme",
+  "private": true,
+  "devDependencies": {
+    "produce": "^0.4.0"
+  }
+}
