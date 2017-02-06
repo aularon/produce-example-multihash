@@ -22,6 +22,6 @@
   "homepage": "https://github.com/aularon/produce-example-multihash#readme",
   "private": true,
   "devDependencies": {
-    "produce": "^0.4.0"
+    "produce": "^0.4.1"
   }
 }
