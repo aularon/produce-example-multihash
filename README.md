@@ -1,5 +1,5 @@
 # produce-example-multihash
-Uses `produce` to create multiple hashes of files in a directory
+Uses [`produce`](https://github.com/etabits/node-produce) to create multiple hashes of files in a directory
 
 ## Setup
 ```sh
@@ -59,6 +59,8 @@ p.run()
 ```
 This will loop the files in source directory (`source: new FileSystemSource('./src')`), and create three output files for each (because `sourceTargets` returns an array of three elements, one for each of the three supported hashes).
 
+[![Example TTY GIF for build script](https://aularon.github.io/produce-example-multihash/build.gif)](https://aularon.github.io/produce-example-multihash/build.gif)
+
 ### serve.js
 This script is almost identical to that of build.js, except for that it plugs and http target:
 ```js
@@ -68,3 +70,5 @@ var p = new produce.Produce(produceOptions)
 p.run()
 ```
 When run, it starts listening on port 9001 for connections. For an example request of [http://localhost:9001/rule-hash.js.md5](http://localhost:9001/rule-hash.js.md5), produce will check every rule's `targetSources` for possible source candidates, our rule above will return `rule.hash.js` as the only possible candidate, which produce will read, pass into the `.via` function, and then send the result to the HTTPTarget, which will send it back to the client in turn.
+
+[![Example TTY GIF for serve script](https://aularon.github.io/produce-example-multihash/serve.gif)](https://aularon.github.io/produce-example-multihash/serve.gif)
